@@ -1,8 +1,9 @@
 terraform {
 backend "s3" {
-  bucket = "terraform-remote-state-abc0282"
-  key    = "terraform.tfstate"
-  region = "eu-central-1"
+  bucket         = "terraform-remote-state-abc0282"
+  key            = "terraform.tfstate"
+  region         = "eu-central-1"
+  dynamodb_table = "terraform-remote-state"
 }
 }
 provider "aws" {
